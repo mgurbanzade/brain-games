@@ -1,8 +1,7 @@
 {
   "name": "brain_games1899",
   "version": "1.0.2",
-  "description": "",
-  "main": "index.js",
+  "description": "Bunch of console games for JS training",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -26,6 +25,6 @@
     "eslint-plugin-import": "^2.10.0",
     "babel-eslint": "*"
   },
-  "author": "",
+  "author": "Mahram Gurbanzade",
   "license": "ISC"
 }
