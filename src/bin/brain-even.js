@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { askForEven } from '..';
+import askForEven from '../games/askForEven';
 
 askForEven();
 

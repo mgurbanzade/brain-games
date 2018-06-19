@@ -4,7 +4,8 @@
   "description": "Bunch of console games for JS training",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "src/bin/brain-calc.js"
   },
   "files": [
     "dist"
@@ -21,14 +22,14 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "*",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
-    "readline-sync": "^1.4.9",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.10.0",
-    "babel-eslint": "*",
-    "eslint-plugin-babel": "^5.1.0"
+    "readline-sync": "^1.4.9"
   },
   "author": "Mahram Gurbanzade",
   "license": "ISC"
