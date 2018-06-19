@@ -1,12 +1,12 @@
 {
   "name": "brain_games1899",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Bunch of console games for JS training",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd"
+    "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "files": [
     "dist"
@@ -29,8 +29,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-import": "^2.10.0",
-    "readline-sync": "^1.4.9"
+    "eslint-plugin-import": "^2.10.0"
   },
   "author": "Mahram Gurbanzade",
   "license": "ISC"
