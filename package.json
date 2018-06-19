@@ -1,11 +1,12 @@
 {
   "name": "brain_games1899",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Bunch of console games for JS training",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd"
   },
   "files": [
     "dist"
