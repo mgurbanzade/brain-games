@@ -1,4 +1,4 @@
-const readlineSync = require('readline-sync');
+import readlineSync from 'readline-sync';
 
 const askPlayerName = () => {
   const playerName = readlineSync.question('May I have your name? ');
