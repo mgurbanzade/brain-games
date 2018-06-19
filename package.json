@@ -1,6 +1,6 @@
 {
   "name": "brain_games1899",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bunch of console games for JS training",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
