@@ -5,7 +5,7 @@
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "src/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"
