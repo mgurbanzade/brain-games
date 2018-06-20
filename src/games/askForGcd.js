@@ -1,3 +1,4 @@
+import { cons } from 'hexlet-pairs';
 import { generateNumber, gameCore } from '..';
 
 const numberLimit = 1000;
@@ -20,13 +21,16 @@ const findGcd = (str) => {
   return num1 + num2;
 };
 
+const generateQnA = () => {
+  const question = generatePair();
+  const answer = findGcd(question);
+  return cons(question, answer);
+};
+
 const askForGcd = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Find the greatest common divisor of given numbers.');
-  console.log('\n');
-  const question = () => generatePair();
-  const correctAnswer = () => arg => findGcd(arg);
-  gameCore(question, correctAnswer);
+  const descr = 'Find the greatest common divisor of given numbers.';
+  const response = () => generateQnA();
+  gameCore(descr, response);
 };
 
 export default askForGcd;

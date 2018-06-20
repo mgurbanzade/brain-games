@@ -1,22 +1,41 @@
+import { cons } from 'hexlet-pairs';
 import { generateNumber, gameCore } from '..';
 
 const numberLimit = 10;
 
-const generateExpression = (num) => {
-  const operator = num > 6.66 ? '*' : num > 3.33 && num < 6.66 ? '-' : '+'; // eslint-disable-line no-nested-ternary
+const mathify = (val1, operator, val2) => {
+  let result;
+
+  switch (true) {
+    case (operator === '*'): result = val1 * val2; break;
+    case (operator === '-'): result = val1 - val2; break;
+    default: result = val1 + val2; break;
+  }
+
+  return result;
+};
+
+const generateQnA = (num) => {
+  let operator;
+
+  switch (true) {
+    case (num > 6.66): operator = '*'; break;
+    case (num > 3.33 && num < 6.66): operator = '-'; break;
+    default: operator = '+';
+  }
+
   const randNum1 = generateNumber(numberLimit);
   const randNum2 = generateNumber(numberLimit);
+  const question = `${randNum1} ${operator} ${randNum2}`;
+  const answer = mathify(randNum1, operator, randNum2);
 
-  return `${randNum1} ${operator} ${randNum2}`;
+  return cons(question, answer);
 };
 
 const askForCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('What is the result of the expression?');
-  console.log('\n');
-  const question = () => generateExpression(generateNumber(numberLimit));
-  const correctAnswer = () => arg => eval(arg); // eslint-disable-line no-eval
-  gameCore(question, correctAnswer);
+  const descr = 'What is the result of the expression?';
+  const response = () => generateQnA(generateNumber(numberLimit));
+  gameCore(descr, response);
 };
 
 export default askForCalc;
