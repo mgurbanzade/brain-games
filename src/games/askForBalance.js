@@ -1,4 +1,5 @@
 import { cons } from 'hexlet-pairs';
+import { generateRangeNumber } from '../utils';
 import gameCore from '../core';
 
 const minRange = 100;
@@ -40,7 +41,7 @@ const balanceNumber = (num) => {
 };
 
 const generateQnA = () => {
-  const question = Math.floor(Math.random() * maxRange) + minRange;
+  const question = generateRangeNumber(minRange, maxRange);
   const answer = parseInt(balanceNumber(question), 10);
   return cons(question, answer);
 };

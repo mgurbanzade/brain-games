@@ -1,3 +1,6 @@
 const generateNumber = limit => Math.floor(Math.random() * limit);
 
-export default generateNumber;
+const generateRangeNumber = (min, max) =>
+  Math.floor(Math.random() * max) + min;
+
+export { generateNumber, generateRangeNumber };

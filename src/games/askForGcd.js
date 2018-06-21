@@ -1,5 +1,5 @@
 import { cons, car, cdr } from 'hexlet-pairs';
-import generateNumber from '../utils';
+import { generateNumber } from '../utils';
 import gameCore from '../core';
 
 const numberLimit = 1000;
