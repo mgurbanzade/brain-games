@@ -23,7 +23,7 @@ const generateQuestionAndAnswer = () => {
   const num1 = generateNumber(numberLimit);
   const num2 = generateNumber(numberLimit);
 
-  return cons(`${num1} ${num2}`, findGcd(num1, num2));
+  return cons(`${num1} ${num2}`, String(findGcd(num1, num2)));
 }
 
 const askForGcd = () => gameCore(description, generateQuestionAndAnswer);

@@ -42,7 +42,7 @@ const balanceNumber = (num) => {
 
 const generateQnA = () => {
   const question = generateRangeNumber(minRange, maxRange);
-  const answer = parseInt(balanceNumber(question), 10);
+  const answer = balanceNumber(question);
   return cons(question, answer);
 };
 

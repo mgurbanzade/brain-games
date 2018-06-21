@@ -31,7 +31,7 @@ const generateQnA = (num) => {
   const question = `${randNum1} ${operator} ${randNum2}`;
   const answer = mathify(randNum1, operator, randNum2);
 
-  return cons(question, answer);
+  return cons(question, String(answer));
 };
 
 const askForCalc = () => {

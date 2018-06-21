@@ -16,7 +16,7 @@ const gameCore = (description, response) => {
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (playerAnswer !== String(correctAnswer)) {
+    if (playerAnswer !== correctAnswer) {
       console.log(`${playerAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       return;
     }

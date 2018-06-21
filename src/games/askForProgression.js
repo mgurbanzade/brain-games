@@ -18,7 +18,7 @@ const generateQnA = () => {
 
   const randomIndex = generateRangeNumber(1, progression.length - 2);
 
-  const answer = progression[randomIndex];
+  const answer = String(progression[randomIndex]);
   progression[randomIndex] = '..';
   const question = progression.join(' ');
 
