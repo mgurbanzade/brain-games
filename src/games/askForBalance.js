@@ -1,25 +1,18 @@
 import { cons } from 'hexlet-pairs';
-import { generateNumber, gameCore } from '..';
+import gameCore from '../core';
 
-const getSumOfNumbers = (num) => {
-  const numStr = String(num);
-  let res = 0;
-  let i = 0;
+const minRange = 100;
+const maxRange = 1000;
+const description = 'Balance the given number.';
 
-  const iterateOver = (str) => {
-    if (i < str.length) {
-      res += parseInt(str[i], 10);
-      i += 1;
-      return iterateOver(str);
-    }
-
-    return res;
-  };
-
-  return iterateOver(numStr);
+const sumDigits = (num) => {
+  const result = String(num).split('').map(Number).reduce((a, b) => a + b, 0);
+  return result;
 };
 
-const concat = (str, num, count) => {
+const concat = (emptyString, num, count) => {
+  let str = emptyString;
+
   if (count > 0) {
     str += num;
     return concat(str, num, count - 1);
@@ -29,28 +22,29 @@ const concat = (str, num, count) => {
 };
 
 const balanceNumber = (num) => {
-  const sum = getSumOfNumbers(num);
   const numLength = String(num).length;
+  const sum = sumDigits(num);
 
   if (sum % numLength === 0) return concat('', sum / numLength, numLength);
 
-  const floor = Math.floor(sum / numLength);
-  const remainder = sum % numLength;
-  const result = concat('', floor, numLength - 1) + (floor + remainder);
-  const lastDigit = result[result.length - 1];
-  const preLastDigit = result[result.length - 2];
+  const num1 = Math.floor(sum / numLength);
+  const num2 = num1 + 1;
+  let a;
 
-  // if (lastDigit - preLastDigit > 1) {
-  //   result
-  // }
+  for (let i = 1; i < numLength; i += 1) {
+    a = concat('', num1, numLength - i) + concat('', num2, i);
+    if (sumDigits(parseInt(a, 10)) === sum) return a;
+  }
+
+  return a;
 };
 
-const askForBalance = () => {
-  const question = 355;
-  const answer = balanceNumber(question);
-
-  console.log(question);
-  console.log(answer);
+const generateQnA = () => {
+  const question = Math.floor(Math.random() * maxRange) + minRange;
+  const answer = parseInt(balanceNumber(question), 10);
+  return cons(question, answer);
 };
+
+const askForBalance = () => gameCore(description, generateQnA);
 
 export default askForBalance;
