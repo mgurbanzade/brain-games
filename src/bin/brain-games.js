@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import askForPlayerName from '../games/askForPlayerName';
+import gamesInterface from '../games/gamesInterface';
 
-askForPlayerName();
+gamesInterface();
 
