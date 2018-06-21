@@ -3,6 +3,7 @@ import generateNumber from '../utils';
 import gameCore from '../core';
 
 const numberLimit = 10;
+const description = 'What is the result of the expression?';
 
 const mathify = (val1, operator, val2) => {
   let result;
@@ -34,7 +35,6 @@ const generateQnA = (num) => {
 };
 
 const askForCalc = () => {
-  const description = 'What is the result of the expression?';
   const response = () => generateQnA(generateNumber(numberLimit));
   gameCore(description, response);
 };
