@@ -3,9 +3,9 @@ import { car, cdr } from 'hexlet-pairs';
 
 const playerMaxScore = 3;
 
-const gameCore = (descr, response) => {
+const gameCore = (description, response) => {
   console.log('Welcome to the Brain Games!');
-  console.log(descr);
+  console.log(description);
   console.log('\n');
   const playerName = readlineSync.question('May I have your name? ');
 

@@ -21,9 +21,8 @@ const generateQnA = () => {
 };
 
 const askForEven = () => {
-  const descr = 'Answer "yes" if number even otherwise answer "no".';
-  const response = () => generateQnA();
-  gameCore(descr, response);
+  const description = 'Answer "yes" if number even otherwise answer "no".';
+  gameCore(description, generateQnA);
 };
 
 export default askForEven;
