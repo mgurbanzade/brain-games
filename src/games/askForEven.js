@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { generateNumber, gameCore } from '..';
+import generateNumber from '../utils';
+import gameCore from '../core';
 
 const isEven = n => n % 2 === 0;
 const numberLimit = 1000;

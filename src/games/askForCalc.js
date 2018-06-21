@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { generateNumber, gameCore } from '..';
+import generateNumber from '../utils';
+import gameCore from '../core';
 
 const numberLimit = 10;
 
