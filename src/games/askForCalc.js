@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { generateNumber, gameCore } from '..';
+import generateNumber from '../utils';
+import gameCore from '../core';
 
 const numberLimit = 10;
 
@@ -33,9 +34,9 @@ const generateQnA = (num) => {
 };
 
 const askForCalc = () => {
-  const descr = 'What is the result of the expression?';
+  const description = 'What is the result of the expression?';
   const response = () => generateQnA(generateNumber(numberLimit));
-  gameCore(descr, response);
+  gameCore(description, response);
 };
 
 export default askForCalc;

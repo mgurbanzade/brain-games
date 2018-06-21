@@ -1,5 +1,6 @@
 import { cons } from 'hexlet-pairs';
-import { generateNumber, gameCore } from '..';
+import generateNumber from '../utils';
+import gameCore from '../core';
 
 const isEven = n => n % 2 === 0;
 const numberLimit = 1000;
@@ -20,9 +21,8 @@ const generateQnA = () => {
 };
 
 const askForEven = () => {
-  const descr = 'Answer "yes" if number even otherwise answer "no".';
-  const response = () => generateQnA();
-  gameCore(descr, response);
+  const description = 'Answer "yes" if number even otherwise answer "no".';
+  gameCore(description, generateQnA);
 };
 
 export default askForEven;
