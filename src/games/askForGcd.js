@@ -3,6 +3,7 @@ import generateNumber from '../utils';
 import gameCore from '../core';
 
 const numberLimit = 1000;
+const description = 'Find the greatest common divisor of given numbers.';
 const generatePair = () => `${generateNumber(numberLimit)} ${generateNumber(numberLimit)}`;
 
 const getNumbersFromString = (str) => {
@@ -35,9 +36,6 @@ const generateQnA = () => {
   return cons(question, answer);
 };
 
-const askForGcd = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-  gameCore(description, generateQnA);
-};
+const askForGcd = () => gameCore(description, generateQnA);
 
 export default askForGcd;
