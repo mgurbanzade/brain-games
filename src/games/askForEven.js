@@ -6,15 +6,15 @@ const numberLimit = 1000;
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = n => n % 2 === 0;
 
+const getAnswer = (q) => {
+  if (isEven(q)) {
+    return 'yes';
+  }
+
+  return 'no';
+};
+
 const generateQnA = () => {
-  const getAnswer = (q) => {
-    if (isEven(q)) {
-      return 'yes';
-    }
-
-    return 'no';
-  };
-
   const question = generateNumber(numberLimit);
   const answer = getAnswer(question);
 

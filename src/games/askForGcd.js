@@ -4,19 +4,8 @@ import gameCore from '../core';
 
 const numberLimit = 1000;
 const description = 'Find the greatest common divisor of given numbers.';
-const generatePair = () => `${generateNumber(numberLimit)} ${generateNumber(numberLimit)}`;
 
-const getNumbersFromString = (str) => {
-  const num1 = parseInt(str.split(' ')[0], 10);
-  const num2 = parseInt(str.split(' ')[1], 10);
-
-  return cons(num1, num2);
-};
-
-const findGcd = (pair) => {
-  let num1 = car(pair);
-  let num2 = cdr(pair);
-
+const findGcd = (num1, num2) => {
   if (num1 !== 0 && num2 !== 0) {
     if (num1 > num2) {
       num1 %= num2;
@@ -24,18 +13,19 @@ const findGcd = (pair) => {
       num2 %= num1;
     }
 
-    return findGcd(cons(num1, num2));
+    return findGcd(num1, num2);
   }
 
   return num1 + num2;
 };
 
-const generateQnA = () => {
-  const question = generatePair();
-  const answer = findGcd(getNumbersFromString(question));
-  return cons(question, answer);
-};
+const generateQuestionAndAnswer = () => {
+  const num1 = generateNumber(numberLimit);
+  const num2 = generateNumber(numberLimit);
 
-const askForGcd = () => gameCore(description, generateQnA);
+  return cons(`${num1} ${num2}`, findGcd(num1, num2));
+}
+
+const askForGcd = () => gameCore(description, generateQuestionAndAnswer);
 
 export default askForGcd;
