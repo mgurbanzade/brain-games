@@ -10,9 +10,9 @@ const gameCore = (description, response) => {
   const playerName = readlineSync.question('May I have your name? ');
 
   for (let i = 0; i < playerMaxScore; i += 1) {
-    const result = response();
-    const question = car(result);
-    const correctAnswer = cdr(result);
+    const gameData = response();
+    const question = car(gameData);
+    const correctAnswer = cdr(gameData);
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
@@ -22,8 +22,9 @@ const gameCore = (description, response) => {
     }
 
     console.log('Correct!');
-    if (i + 1 === playerMaxScore) console.log(`Congratulations, ${playerName}!`);
   }
+
+  console.log(`Congratulations, ${playerName}!`);
 };
 
 export default gameCore;
