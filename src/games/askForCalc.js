@@ -17,7 +17,7 @@ const mathify = (val1, operator, val2) => {
   return result;
 };
 
-const generateQnA = (num) => {
+const generateQuestionAndAnswer = (num) => {
   let operator;
 
   switch (true) {
@@ -35,7 +35,7 @@ const generateQnA = (num) => {
 };
 
 const askForCalc = () => {
-  const response = () => generateQnA(generateNumber(numberLimit));
+  const response = () => generateQuestionAndAnswer(generateNumber(numberLimit));
   gameCore(description, response);
 };
 

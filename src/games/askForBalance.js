@@ -40,12 +40,12 @@ const balanceNumber = (num) => {
   return a;
 };
 
-const generateQnA = () => {
+const generateQuestionAndAnswer = () => {
   const question = generateRangeNumber(minRange, maxRange);
   const answer = balanceNumber(question);
   return cons(question, answer);
 };
 
-const askForBalance = () => gameCore(description, generateQnA);
+const askForBalance = () => gameCore(description, generateQuestionAndAnswer);
 
 export default askForBalance;

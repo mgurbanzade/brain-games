@@ -7,7 +7,7 @@ const numberLimit = 100;
 const stepLimit = 10;
 const progressionLength = 10;
 
-const generateQnA = () => {
+const generateQuestionAndAnswer = () => {
   const progression = [];
   const startPoint = generateNumber(numberLimit);
   const step = generateNumber(stepLimit);
@@ -25,6 +25,6 @@ const generateQnA = () => {
   return cons(question, answer);
 };
 
-const askForProgression = () => gameCore(description, generateQnA);
+const askForProgression = () => gameCore(description, generateQuestionAndAnswer);
 
 export default askForProgression;

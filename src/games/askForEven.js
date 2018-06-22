@@ -14,13 +14,13 @@ const getAnswer = (q) => {
   return 'no';
 };
 
-const generateQnA = () => {
+const generateQuestionAndAnswer = () => {
   const question = generateNumber(numberLimit);
   const answer = getAnswer(question);
 
   return cons(question, answer);
 };
 
-const askForEven = () => gameCore(description, generateQnA);
+const askForEven = () => gameCore(description, generateQuestionAndAnswer);
 
 export default askForEven;
