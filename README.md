@@ -25,3 +25,5 @@ $ make install
 ```sh
 $ brain-games
 ```
+
+![Usage](https://github.com/mgurbanzade/brain-games/blob/master/src/demo.gif)
