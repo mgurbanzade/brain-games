@@ -4,9 +4,10 @@ import askForCalc from './askForCalc';
 import askForGcd from './askForGcd';
 import askForBalance from './askForBalance';
 import askForProgression from './askForProgression';
+import askForPrime from './askForPrime';
 
-const gameNames = ['Even', 'Calc', 'Gcd', 'Balance', 'Progression'];
-const games = [askForEven, askForCalc, askForGcd, askForBalance, askForProgression];
+const gameNames = ['Even', 'Calc', 'Gcd', 'Balance', 'Progression', 'Prime'];
+const games = [askForEven, askForCalc, askForGcd, askForBalance, askForProgression, askForPrime];
 
 
 const gamesInterface = () => {

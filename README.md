@@ -14,6 +14,8 @@
 
 **Brain Progression** - Find the missing number in progression.
 
+**Brain Prime** - Guess if number is prime.
+
 ## Setup
 
 ```sh
