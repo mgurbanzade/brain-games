@@ -6,20 +6,8 @@ const numberLimit = 1000;
 const description = 'Find the greatest common divisor of given numbers.';
 
 const findGcd = (val1, val2) => {
-  let num1 = val1;
-  let num2 = val2;
-
-  if (num1 !== 0 && num2 !== 0) {
-    if (num1 > num2) {
-      num1 %= num2;
-    } else {
-      num2 %= num1;
-    }
-
-    return findGcd(num1, num2);
-  }
-
-  return num1 + num2;
+  if (!val2) return val1;
+  return findGcd(val2, val1 % val2);
 };
 
 const generateQuestionAndAnswer = () => {

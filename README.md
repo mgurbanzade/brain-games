@@ -26,4 +26,4 @@ $ make install
 $ brain-games
 ```
 
-![Usage](https://github.com/mgurbanzade/brain-games/blob/master/src/demo.gif)
+![Usage](https://github.com/mgurbanzade/brain-games/blob/master/common/demo.gif)
