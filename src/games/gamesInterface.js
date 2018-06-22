@@ -20,7 +20,7 @@ const gamesInterface = () => {
   console.log('\n');
   let playerChoice = readlineSync.question('Please type the number of the game you want to play: ');
 
-  while (!playerChoice.match(/[0-9]/) || playerChoice > games.length - 1) {
+  while (!playerChoice.match(/[0-9]/) || playerChoice > games.length - 1 || playerChoice < 0) {
     playerChoice = readlineSync.question('Incorrect input! Try again: ');
   }
 

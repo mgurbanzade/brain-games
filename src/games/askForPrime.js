@@ -6,18 +6,19 @@ const numberLimit = 100;
 const description = 'Is this number prime? Answer yes/no';
 
 const isPrime = (num) => {
-  if (num < 2) return 'no';
+  if (num < 2) return false;
+  const sqrt = Math.sqrt(num);
 
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) return 'no';
+  for (let i = 2; i < sqrt; i += 1) {
+    if (num % i === 0) return false;
   }
 
-  return 'yes';
+  return true;
 };
 
 const generateQuestionAndAnswer = () => {
   const question = generateNumber(numberLimit);
-  const answer = isPrime(question);
+  const answer = isPrime(question) ? 'yes' : 'no';
   return cons(question, answer);
 };
 
